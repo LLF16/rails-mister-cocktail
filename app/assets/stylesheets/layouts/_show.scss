@@ -1,0 +1,25 @@
+// -> grid + ingredient list + add option
+.grid {
+  display: flex;
+}
+
+.ingredient {
+  flex: 0 0 auto;
+}
+
+#show-image {
+  background-image: asset-url('test2.png');
+  height: 350px;
+  background-size: cover;
+  flex: 0 0 200px;
+  // position: sticky !important; /* !important to override Gmaps inline CSS */
+  // top: 0 !important;
+}
+
+ul {
+  text-align: left;
+}
+
+li {
+  margin-top: 10px;
+}

@@ -8,3 +8,5 @@
 // layout file, like app/views/layouts/application.html.erb
 
 import 'bootstrap';
+// import { magicFunction } from '../components/magic_menu';
+import '../components/modal'
