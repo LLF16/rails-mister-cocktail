@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Cocktails#new</h1>
+  <p>Add your favorite cocktail to the list</p>
+
+  <%= simple_form_for @cocktail do |f| %>
+  <%= f.input :name %>
+  <%= f.submit 'Create your cocktail!' %>
+  <% end %>
+  <%= link_to 'Cancel', cocktails_path  %>
+</div>
+

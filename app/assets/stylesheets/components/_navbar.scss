@@ -15,6 +15,23 @@
   height: 50px;
 }
 
+.navbar-wagon-brand {
+  display: flex;
+  &:hover {
+    color: #8E8B7E;
+  }
+}
+
+.navbar-wagon-brand h4 {
+  font-family: 'Pacifico', cursive;
+  color: black;
+  font-size: 30px;
+  padding-left: 10px;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 /* User Avatar */
 .navbar-wagon .avatar {
   height: 35px;
