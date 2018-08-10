@@ -1,24 +1,48 @@
 <div class="container">
-  <h1><%= @cocktail.name %></h1>
-  <div class="menu">
+  <h1 class="show-title"><%= @cocktail.name %></h1>
+  <div class="menu-show">
     <div class="grid">
       <div id="show-image">
+        <%= cl_image_tag @cocktail.photo, height: 400, crop: :scale %>
       </div>
       <div class="ingredient">
-        <h3>List of ingredients</h3>
+        <h3 class="ingredients-title">List of ingredients</h3>
         <ul>
           <% @cocktail.doses.each do |dose| %>
           <li>
             <%= dose.description %>
-            <%= dose.ingredient[:name] %>
-            <%= link_to 'Remove', dose_path(dose), method: :delete, class: "btn btn-danger"  %>
+            <%= dose.ingredient[:name] %>  -
+            <%= link_to (raw("<i class='fas fa-trash-alt'></i>")), dose_path(dose), method: :delete, class: "button-trash"  %>
           </li>
           <% end %>
         </ul>
-        <%= link_to 'Add a new ingredient', new_cocktail_dose_path(@cocktail), class: "btn btn-primary"  %>
+        <%= link_to 'Add a new ingredient', new_cocktail_dose_path(@cocktail), class: "btn button-add-ingredient"  %>
         <br>
       </div>
     </div>
   </div>
-        <%= link_to 'Back to list', cocktails_path, class: "btn btn-primary btn-menu"  %>
+        <!-- Button trigger modal -->
+<button type="button" class="btn button-magic" data-toggle="modal" data-target="#myModal">
+  How to pour the perfect <%= @cocktail.name %> ?
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" background-color="black" >
+      <div class="modal-body">
+          <iframe class="embed-responsive-item" height="400" width="500" border="none" src="https://media.giphy.com/media/12NUbkX6p4xOO4/giphy.gif"
+                                    webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<%= link_to 'Back to list', cocktails_path, class: "btn button-back"  %>
+
+
+
+
 </div>

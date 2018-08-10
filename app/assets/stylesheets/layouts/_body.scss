@@ -7,9 +7,26 @@ body {
   text-align: center;
 }
 
+.content {
+}
+
 .menu {
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 20px;
   border: solid 1px rgb(100,100,100);
   padding: 20px;
+  height: 75vh;
+  position: relative;
+  text-align: center;
+}
+
+.form {
+  height: 300px;
+}
+
+
+.main-title {
+  color: rgba(215,10,85, 1);
+  font-weight: bold;
+
 }

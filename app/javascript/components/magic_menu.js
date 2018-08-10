@@ -1,6 +1,6 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 
-$('.card-name-text').hover(spaceOutRight () {
+$('.card-image').hover(spaceOutRight () {
   $(this).addClass('magictime puffIn');
 });
 
