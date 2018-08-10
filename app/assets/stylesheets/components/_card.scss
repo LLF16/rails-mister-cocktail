@@ -16,14 +16,18 @@
   font-family: 'Permanent Marker', cursive;
   font-size: 30px;
   width: 100px;
+
 }
 
 .card-name-text {
 color: black;
+&:hover {
+  color: rgb(50,50,50);
+}
 }
 
 .menu {
-  margin: 0;
+  // margin: 0;
   overflow-y:scroll;
   overflow-x:hidden;
   transform: rotate(270deg) translateX(-100%);
